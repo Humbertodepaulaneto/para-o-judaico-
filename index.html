@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Site</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3e8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .tela {
+      text-align: center;
+    }
+
+    h1 {
+      color: #4c1d95;
+    }
+
+    button {
+      background: #7c3aed;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    button:hover {
+      background: #6d28d9;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tela">
+    <h1 id="titulo">Tela inicial</h1>
+
+    <button onclick="mudarTela()" id="botao">
+      Mudar de tela
+    </button>
+  </div>
+
+  <script>
+    let segundaTela = false;
+
+    function mudarTela() {
+      segundaTela = !segundaTela;
+
+      if (segundaTela) {
+        document.getElementById("titulo").textContent = "boa seu judeuzinho";
+        document.getElementById("botao").textContent = "Voltar";
+      } else {
+        document.getElementById("titulo").textContent = "clique aqui se for judeu";
+        document.getElementById("botao").textContent = "Mudar de tela";
+      }
+    }
+  </script>
+</body>
+</html>
